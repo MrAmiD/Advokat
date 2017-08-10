@@ -30,7 +30,6 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/fancybox-master/dist/jquery.fancybox.min.js',
         'app/libs/OwlCarousel2-2.2.1/dist/owl.carousel.min.js',
-        'app/libs/fancybox-master/dist/jquery.fancybox.js',
         'app/libs/mmenu/jquery.mmenu.all.js',
         'app/libs/fotorama-4.6.4/fotorama.js',
         'app/js/jquery.maskedinput.min.js',
