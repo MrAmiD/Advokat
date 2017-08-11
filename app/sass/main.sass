@@ -184,6 +184,8 @@ header
 		a
 			display: inline-block
 			margin-top: 14px
+	.header-lvl2
+		border-bottom: solid 1px #dedede;
 
 .main-slider-sec
 	.container-fluid
@@ -490,7 +492,7 @@ header
 			&:hover, &:active
 				color: #000
 
-		.prev
+		.prev:not(.arr)
 			height: 83px
 			width: 100%
 			position: relative
@@ -592,7 +594,7 @@ header
 		.fa
 			color: #ffffff
 
-.contacts
+section.contacts
 	.container-fluid
 		padding: 0px
 	background: $accent
@@ -636,4 +638,222 @@ footer
 		line-height: 37px
 	.logo-cont
 		margin-top: 0px
+
+.blog-page
+	margin-top: 15px
+	.h1-cont
+		padding: 0px 15px
+	.h1
+		font-weight: 900
+		font-size: 20px
+		border-bottom: solid 3px $accent
+	.blog-side
+		border: solid 1px #e1e1e1
+		padding-top: 27px
+		padding-bottom: 20px
+	.show-all
+		color: #000
+		display: inline-block
+		text-align: right
+		width: 100%
+		padding-right: 15px
+		margin-top: 60px
+		&:hover, &:active, &:focus
+			text-decoration: none
+			color: $accent
+	ul:not(.pagination)
+		padding: 0px
+		margin: 0px
+		list-style: none
+		margin-top: 20px
+		height: 210px
+		overflow: hidden
+		transition: height .3s ease
+		li
+			line-height: 2.5
+			a
+				color: #000
+				text-decoration: none
+				display: inline-block
+				width: 100%
+				height: 100%
+				padding-left: 15px
+				&:hover, &:focus
+					color: #ffffff
+					text-decoration: none
+			&:hover
+				background: $accent
+				color: #ffffff
+	.small-contact
+		position: relative
+		margin-top: 20px
+		.h4
+			font-size: 13px
+			font-weight: 500
+		p
+			font-size: 13px
+			font-weight: 900
+			display: inline-block
+			margin: 0px
+			position: relative
+			top: -7px
+		.logo-discr
+			display: inline-block
+			margin-top: 0px
+			padding-left: 10px
+		.img-ava
+			display: inline-block
+			position: relative
+			top: 0px
+			width: 40px
+			height: 40px
+			border-radius: 50%
+			border: solid 1px $accent
+			background-position: center!important
+		a
+			color: #000
+			text-decoration: none
+			display: inline-block
+			&:hover, &:focus
+				color: $accent
+				text-decoration: none
+	.news-list
+		.item
+			padding-bottom: 16px
+			border-bottom: solid 1px #dedede
+			margin-top: 20px
+			&:first-child
+				margin-top: 0px
+		.prev:not(.arr)
+			width: 100%
+			height: 150px
+			background-size: cover
+		.theme-txt
+			.h3
+				font-weight: 500
+				font-size: 14px
+				background: $accentdark
+				text-align: center
+				color: #ffffff
+				margin-bottom: 5px
+		.h2
+			font-size: 18px
+			font-weight: 900
+			text-decoration: underline
+			a
+				color: #000
+				&:hover
+					text-decoration: none
+			&:hover
+				text-decoration: none
+		.view-counts
+			margin: 0px
+			text-align: right
+			margin-top: 5px
+		.pub-date
+			font-size: 12px
+			font-weight: 500
+			margin-top: 40px
+			display: inline-block
+			svg
+				position: relative
+				top: 3px
+		.read-more
+			margin: 0px
+			text-align: right
+			margin-top: 5px
+			margin-top: 40px
+			font-size: 12px
+			font-weight: 500
+			svg
+				position: relative
+				top: 5px
+			a
+				color: #000
+				border-bottom: solid 1px #000000
+				padding-bottom: 5px
+				&:hover
+					text-decoration: none
+					border-color: transparent
+		.no-image-prev
+			.pub-date, .read-more
+				margin-top: 10px
+	.pag-cont
+		border-bottom: solid 1px #dedede
+		.pagination
+			padding: 0px
+			display: inline-block
+			margin-top: 20px
+			margin-bottom: 5px
+			.arr
+				min-width: 128px
+				min-height: 32px
+				border: solid 1px #b4b4b4
+				line-height: 30px
+				font-size: 12px
+				font-weight: 500
+				border-radius: 0px
+				&.disabled
+					a
+						color: #b4b4b4
+						pointer-events: none
+						cursor: default
+					&:hover
+						background-color: transparent
+						border-color: #b4b4b4
+				&.prev
+					.fa
+						padding-right: 10px
+				&.next
+					.fa
+						padding-left: 10px
+			li
+				margin-bottom: 15px
+				margin-right: 10px
+				width: 20px
+				height: 20px
+				display: inline-block
+				text-align: center
+				line-height: 16px
+				border-radius: 0px
+				border: solid 1px transparent
+				position: relative
+				transition: all .3s ease
+				border-radius: 50%
+				&.dots
+					border: none
+				&:hover
+					background-color: $accent
+					border-color: $accent
+				a
+					font-size: 14px
+					font-weight: 500
+					display: inline-block
+					width: 100%
+					height: 100%
+					color: #000
+					&:hover
+						text-decoration: none
+						color: #ffffff
+				&:last-child
+					margin-right: 0px
+				&.active
+					background-color: $accent
+					a
+						color: #ffffff
+	.intresting
+		margin-bottom: 100px
+		.h2
+			font-size: 34px
+			color: #000
+			font-weight: 900
+			text-decoration: none
+			margin-top: 60px
+		p
+			a
+				color: #000
+				text-decoration: underline
+				&:hover, &:focus
+					color: #000
+					text-decoration: none
 @import "media" // Всегда в конце

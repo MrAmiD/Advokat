@@ -50,5 +50,27 @@ $(function() {
         }
     );
 
+    $(document).on( "click", ".show-all", function() {
+        console.log('gg');
+        var sum_h = 0;
+        var sum_5 = 0;
+        if(!$(this).hasClass('active')){
+            $($(this).data().id + ' li').each(function () {
+                sum_h = sum_h + $(this).height();
+            });
+            $($(this).data().id).height(sum_h);
+            $(this).addClass('active');
+            $(this).html('Свернуть ↑');
+        }
+        else{
+            $(this).removeClass('active');
+            $($(this).data().id + ' li').each(function (index) {
+                if (index < 5)
+                    sum_5 = sum_5 + $(this).height();
+            });
+            $($(this).data().id).height(sum_5)
+            $(this).html('Ещё ↓');
+        }
+    });
 
 });
