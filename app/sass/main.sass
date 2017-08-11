@@ -69,7 +69,7 @@ h5, .h5
 	margin-bottom: 0px
 p
 	font-family: $default-font
-	font-size: 17px
+	font-size: 14px
 	color: #000000
 
 .tr-btn
@@ -91,6 +91,31 @@ p
 		background: $accent2
 		color: #ffffff
 		text-decoration: none
+
+.btn-pink
+	background: $accent
+	border: solid 1px $accent
+	color: #ffffff
+	border-radius: 5px
+	padding: 5px 10px
+	padding-left: 15px
+	font-weight: 900
+	transition: background .3s ease
+	font-size: 14px
+	position: relative
+	svg
+		top: 4px
+		position: relative
+		left: -5px
+	&:hover,&:focus
+		border-color: $accent
+		background: #ffffff
+		text-decoration: none
+		color: #000
+		svg
+			path
+				fill: $accent
+
 header
 	border-top: solid 8px $accent
 	.header-lvl1
@@ -161,6 +186,9 @@ header
 			margin-top: 14px
 
 .main-slider-sec
+	.container-fluid
+		.row
+			position: relative
 	#main-slider
 		padding: 0px
 		.item
@@ -185,5 +213,427 @@ header
 			p
 				font-size: 16px
 				font-weight: 500
+#customNavMain-slider
+	&.slider-controls
+		position: absolute
+		z-index: 2
+		top: 50%
+		transform: translateY(-50%)
+		width: 100%
+		opacity: 1
+	.control-btn
+		background: rgba($accent, 0.7)
+		width: 65px
+		height: 65px
+		text-align: center
+		transform: translateY(-50%)
+		border-radius: 50%
+		cursor: pointer
+		z-index: 2
+		display: inline-block
+		svg
+			line-height: 65px
+	.owl-prev
+		left: -17px
+		z-index: 2
+		position: absolute
+		svg
+			position: relative
+			top: 50%
+			transform: translateY(-50%)
+			left: 16px
+	.owl-next
+		right: -17px
+		z-index: 2
+		position: absolute
+		svg
+			position: relative
+			top: 50%
+			transform: translateY(-50%)
+			right: 16px
 
+	.fa
+		color: #ffffff
+		
+.services
+	margin-top: $section-margin
+	.h3
+		text-align: center
+		font-weight: 900
+	.h2
+		text-align: center
+		font-weight: 900
+		font-size: 34px
+		margin-bottom: 35px
+	.col-xs-12
+		padding: 2px
+//---------------------
+//Flip div effect------
+//---------------------
+.flip-container
+	-webkit-perspective: 1000
+	-moz-perspective: 1000
+	-o-perspective: 1000
+	perspective: 1000
+	position: relative
+	&:hover
+		cursor: pointer
+.flip-container:hover .flipper, .flip-container.hover .flipper
+	-webkit-transform: rotateY(180deg)
+	-moz-transform: rotateY(180deg)
+		-o-transform: rotateY(180deg)
+	transform: rotateY(180deg)
+
+.flip-container, .front, .back
+	width: 100%
+	height: 280px
+
+.flipper
+	-webkit-transition: 0.6s
+	-webkit-transform-style: preserve-3d
+	-moz-transition: 0.6s
+	-moz-transform-style: preserve-3d
+		-o-transition: 0.6s
+	-o-transform-style: preserve-3d
+	transition: 0.6s
+	transform-style: preserve-3d
+	position: relative
+
+.front, .back
+	-webkit-backface-visibility: hidden
+	-moz-backface-visibility: hidden
+		-o-backface-visibility: hidden
+	backface-visibility: hidden
+	position: absolute
+	top: 0
+	left: 0
+	.txt-h
+		line-height: 1.4
+		display: inline-block
+	p
+		line-height: 1.3
+.front
+	z-index: 2
+	background-position-x: -5px!important
+	.svg-cont
+		position: relative
+		top: 10px
+	.h3
+		font-weight: 900
+		color: #ffffff
+		text-align: center
+		position: relative
+		display: inline-block
+		width: 100%
+		top: 50%
+		transform: translateY(-50%)
+		font-size: 24px
+	&:after
+		content: ''
+		width: 100%
+		height: 100%
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		background: rgba(#152537, 0.8)
+		position: absolute
+		z-index: -1
+	&:before
+		content: ''
+		left: 15px
+		right: 15px
+		top: 15px
+		bottom: 15px
+		border: solid 1px rgba(#ffffff, 1)
+		position: absolute
+		z-index: -1
+		border-radius: 30px
+
+.back
+	-webkit-transform: rotateY(180deg)
+	-moz-transform: rotateY(180deg)
+		-o-transform: rotateY(180deg)
+	transform: rotateY(180deg)
+	background: #f8f8f8
+ .svg-cont
+	 position: relative
+	 top: 10px
+	.h3
+		color: #ffffff
+		width: 100%
+		text-align: center
+		display: inline-block
+		font-size: 24px
+		padding-top: 23px
+	p
+		margin: 0px
+		font-size: 13px
+		color: #ffffff
+		font-weight: 500
+		padding-left: 40px
+		padding-right: 20px
+	&:after
+		content: ''
+		width: 100%
+		height: 100%
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		background: $accent
+		position: absolute
+		z-index: -1
+	&:before
+		content: ''
+		left: 15px
+		right: 15px
+		top: 15px
+		bottom: 15px
+		border: solid 1px rgba(#ffffff, 1)
+		position: absolute
+		z-index: 0
+		border-radius: 30px
+
+.back-logo
+	position: absolute
+	top: 40px
+	left: 90px
+	width: 160px
+	height: 117px
+	background: url(http://davidwalsh.name/demo/logo.png) 0 0 no-repeat
+
+.back-title
+	font-weight: bold
+	color: #00304a
+	position: absolute
+	top: 180px
+	left: 0
+	right: 0
+	text-align: center
+	text-shadow: 0.1em 0.1em 0.05em #acd7e5
+	font-family: Courier
+	font-size: 2em
+
+.blog
+	margin-top: $section-margin
+	.h3
+		text-align: center
+		font-weight: 900
+	.h2
+		text-align: center
+		font-weight: 900
+		font-size: 34px
+		margin-bottom: 35px
+	p
+		margin-top: 4px
+	.pub-date
+		display: inline-block
+		width: 100%
+		text-align: right
+		margin-top: 18.62px
+		position: relative
+		svg
+			position: relative
+			top: 2px
+	.single-news
+		.h4
+			font-size: 14px
+			color: #000000
+			font-weight: 900
+		.prev
+			height: 325px
+			position: relative
+			.blog-header
+				position: relative
+				z-index: 1
+				.h4
+					font-size: 14px
+					color: #ffffff
+					font-weight: 900
+					padding-left: 18px
+					padding-top: 22px
+					margin-top: 0px
+					svg
+						position: relative
+						top: 5px
+						left: -3px
+			&:after
+				content: ''
+				top: 0px
+				right: 0px
+				bottom: 0px
+				left: 0px
+				background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%)
+				background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
+				background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%)
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 )
+				position: absolute
+	.news-feed
+		.prev-cont
+			padding-right: 0px
+		.item
+			margin-bottom: 25px
+		.h4
+			font-weight: 900
+			font-size: 14px
+			margin-top: 0px
+			margin-bottom: 10px
+		.pub-date
+			margin-top: 0px
+		.news-link
+			font-weight: 500
+			font-size: 13px
+			color: #000
+			line-height: 16px
+			display: inline-block
+			&:hover, &:active
+				color: #000
+
+		.prev
+			height: 83px
+			width: 100%
+			position: relative
+			background-size: cover!important
+
+			&:after
+				content: ''
+				top: 0px
+				right: 0px
+				bottom: 0px
+				left: 0px
+			 	position: absolute
+
+.fancybox-button--thumbs
+	display: none!important
+.gallery
+	margin-top: $section-margin
+	.h2
+		color: #ffffff
+		font-weight: 900
+		font-size: 34px
+		text-align: center
+		position: relative
+		z-index: 1
+		margin-bottom: 34px
+	.container
+		position: relative
+		.row
+			position: relative
+	.container-fluid
+		padding: $section-margin 0
+		position: relative
+		padding-bottom: 120px
+		&:after
+			content: ''
+			width: 100%
+			height: 100%
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			background: rgba(#152537, 0.8)
+			position: absolute
+			z-index: 0
+			display: block
+	#license-gallery
+		position: relative
+		padding: 0px 50px
+		.item
+			height: 220px
+			border: solid #ffffff 10px
+			img
+				object-fit: cover
+				overflow: hidden
+				max-height: 100%
+			&:hover
+				border-color: $accent
+				&:after
+					content: "\f0b2"
+					width: 40px
+					height: 40px
+					background: $accent
+					position: absolute
+					font-family: FontAwesome
+					top: 20px
+					left: 20px
+					color: #ffffff
+					border-radius: 50%
+					text-align: center
+					line-height: 40px
+					font-size: 20px
+
+	#customNavLicense
+		&.slider-controls
+			position: absolute
+			z-index: 2
+			top: 50%
+			transform: translateY(-50%)
+			width: 100%
+		.control-btn
+			width: 40px
+			height: 40px
+			text-align: center
+			transform: translateY(-25%)
+			border-radius: 50%
+			cursor: pointer
+			z-index: 2
+			display: inline-block
+			.fa
+				line-height: 40px
+		.owl-prev
+			left: 0px
+			z-index: 2
+			position: absolute
+		.owl-next
+			right: 0px
+			z-index: 2
+			position: absolute
+		.fa
+			color: #ffffff
+
+.contacts
+	.container-fluid
+		padding: 0px
+	background: $accent
+	.h3
+		font-weight: 900
+		font-size: 27px
+		color: #ffffff
+	p
+		font-weight: 700
+		margin-bottom: 0px
+		margin-top: 0px
+		color: #ffffff
+	.row
+		position: relative
+	.discr
+		text-align: right
+		height: 100%
+		top: 244px
+		.contact-info
+			width: 313px
+			text-align: left
+			float: right
+			position: relative
+			top: 50%
+
+	#map_way
+		width: 100%
+		height: 595px
+
+footer
+	padding: 30px 0px
+	a
+		color: #000
+		transition: all .3s ease
+
+		&:hover
+			color: $accent2
+			text-decoration: none
+	p
+		margin: 0px
+		line-height: 37px
+	.logo-cont
+		margin-top: 0px
 @import "media" // Всегда в конце
