@@ -783,14 +783,6 @@ footer
 			width: 100%
 			height: 150px
 			background-size: cover
-		.theme-txt
-			.h3
-				font-weight: 500
-				font-size: 14px
-				background: $accentdark
-				text-align: center
-				color: #ffffff
-				margin-bottom: 5px
 		.h2
 			font-size: 18px
 			font-weight: 900
@@ -833,82 +825,221 @@ footer
 		.no-image-prev
 			.pub-date, .read-more
 				margin-top: 10px
-	.pag-cont
-		border-bottom: solid 1px #dedede
-		.pagination
-			padding: 0px
-			display: inline-block
-			margin-top: 20px
-			margin-bottom: 5px
-			.arr
-				min-width: 128px
-				min-height: 32px
-				border: solid 1px #b4b4b4
-				line-height: 30px
-				font-size: 12px
-				font-weight: 500
-				border-radius: 0px
-				&.disabled
-					a
-						color: #b4b4b4
-						pointer-events: none
-						cursor: default
-					&:hover
-						background-color: transparent
-						border-color: #b4b4b4
-				&.prev
-					.fa
-						padding-right: 10px
-				&.next
-					.fa
-						padding-left: 10px
-			li
-				margin-bottom: 15px
-				margin-right: 10px
-				width: 20px
-				height: 20px
-				display: inline-block
-				text-align: center
-				line-height: 16px
-				border-radius: 0px
-				border: solid 1px transparent
-				position: relative
-				transition: all .3s ease
-				border-radius: 50%
-				&.dots
-					border: none
-				&:hover
-					background-color: $accent
-					border-color: $accent
+.pag-cont
+	border-bottom: solid 1px #dedede
+	.pagination
+		padding: 0px
+		display: inline-block
+		margin-top: 20px
+		margin-bottom: 5px
+		.arr
+			min-width: 128px
+			min-height: 32px
+			border: solid 1px #b4b4b4
+			line-height: 30px
+			font-size: 12px
+			font-weight: 500
+			border-radius: 0px
+			&.disabled
 				a
-					font-size: 14px
-					font-weight: 500
-					display: inline-block
-					width: 100%
-					height: 100%
-					color: #000
-					&:hover
-						text-decoration: none
-						color: #ffffff
-				&:last-child
-					margin-right: 0px
-				&.active
-					background-color: $accent
-					a
-						color: #ffffff
-	.intresting
-		margin-bottom: 100px
-		.h2
-			font-size: 34px
-			color: #000
-			font-weight: 900
-			text-decoration: none
-			margin-top: 60px
-		p
+					color: #b4b4b4
+					pointer-events: none
+					cursor: default
+				&:hover
+					background-color: transparent
+					border-color: #b4b4b4
+			&.prev
+				.fa
+					padding-right: 10px
+			&.next
+				.fa
+					padding-left: 10px
+		li
+			margin-bottom: 15px
+			margin-right: 10px
+			width: 20px
+			height: 20px
+			display: inline-block
+			text-align: center
+			line-height: 16px
+			border-radius: 0px
+			border: solid 1px transparent
+			position: relative
+			transition: all .3s ease
+			border-radius: 50%
+			&.dots
+				border: none
+			&:hover
+				background-color: $accent
+				border-color: $accent
 			a
+				font-size: 14px
+				font-weight: 500
+				display: inline-block
+				width: 100%
+				height: 100%
 				color: #000
-				text-decoration: underline
-				&:hover, &:focus
-					color: #000
+				&:hover
 					text-decoration: none
+					color: #ffffff
+			&:last-child
+				margin-right: 0px
+			&.active
+				background-color: $accent
+				a
+					color: #ffffff
+
+.theme-txt
+	.h3
+		font-weight: 500
+		font-size: 14px
+		background: $accentdark
+		text-align: center
+		color: #ffffff
+		margin-bottom: 5px
+.intresting
+	margin-bottom: 100px
+	.h2
+		font-size: 34px
+		color: #000
+		font-weight: 900
+		text-decoration: none
+		margin-top: 60px
+	p
+		a
+			color: #000
+			text-decoration: underline
+			&:hover, &:focus
+				color: #000
+				text-decoration: none
+
+.content
+	border-bottom: solid 1px #aeaeae
+	padding-bottom: 50px
+	h1, .h1
+		font-family: $default-font, sans-serif
+		font-size: 64px
+		color: $black
+		margin: 0px
+		margin-bottom: 30px
+	h2, .h2
+		font-family: $default-font, sans-serif
+		color: $black
+		margin: 0px
+		margin-bottom: 18px
+		font-weight: 900
+		font-size: 55px
+		text-decoration: underline
+	h3, .h3
+		font-family: $default-font, sans-serif
+		font-size: 31px
+		color: black
+		margin: 0px
+		margin-bottom: 15px
+	h4, .h4
+		font-family: $default-font, sans-serif
+		font-size: 24px
+		color: $black
+		margin-bottom: 15px
+	h5, .h5
+		font-family: $default-font, sans-serif
+		font-size: 14px
+		color: $black
+		letter-spacing: normal
+		margin-bottom: 15px
+	p
+		font-family: $default-font, sans-serif
+		font-size: 16px
+		color: $black
+		margin-bottom: 15px
+	a
+		font-weight: 700
+		&:focus
+			color: $accent2
+	.theme-txt
+		.h3
+			color: #ffffff
+			font-size: 14px
+			font-weight: 500
+			line-height: 30px
+	blockquote
+		background: $default-color
+		border-radius: 5px
+		p
+			font-style: italic
+			position: relative
+			padding-right: 2rem
+			&:before
+				content: '\f10d '
+				font-family: FontAwesome
+				position: absolute
+				left: 9px
+			&:after
+				content: '\f10e'
+				font-family: FontAwesome
+				position: absolute
+				right: 9px
+	table
+		th
+			background: rgba($default-color, 0.4)
+			padding: 0 15px
+		td
+			padding: 0 15px
+		tr
+			border-bottom: solid 1px $default-color
+			&:nth-child(odd)
+				background: rgba($default-color, 0.4)
+	ul
+		list-style: katakana
+		padding-left: 20px
+		margin-top: 30px
+		li
+			list-style: circle
+			ul
+				margin-top: 0px
+				padding-left: 30px
+				li
+					list-style: square
+	ol
+		padding-left: 20px
+		li
+			ol
+				padding-left: 30px
+	img
+		max-width: 100%
+		margin-bottom: 20px
+	iframe
+		max-width: 100%
+	video
+		max-width: 100%
+.news-article
+	.h2
+		font-size: 18px
+		font-weight: 900
+		text-decoration: underline
+	.theme-txt
+		.h3
+			line-height: 30px
+	.prev-news
+		img
+			margin-bottom: 15px
+			display: block
+			margin-top: 15px
+	.news-info
+		.pub-date, .view-counts
+			text-align: right
+			display: inline-block
+			width: 100%
+			color: #aeaeae
+			font-size: 12px
+			font-weight: 500
+			font-family: $default-font
+			svg
+				position: relative
+				top: 2px
+				path
+					fill: #aeaeae
+		.view-counts
+			text-align: left
+
 @import "media" // Всегда в конце
