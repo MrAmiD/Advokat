@@ -73,4 +73,54 @@ $(function() {
         }
     });
 
+    $(document).on( "click", ".contacts ul li", function() {
+        console.log('.con-txt',$(this).find('.con-txt'));
+        $('.contacts ul li').find('.con-txt').removeClass('active');
+        $(this).find('.con-txt').addClass('active');
+    });
+
+
+    $(document).mouseup(function(e)
+    {
+        var container = $(".contacts ul li .con-txt");
+
+        // if the target of the click isn't the container nor a descendant of the container
+        if (!container.is(e.target) && container.has(e.target).length === 0)
+        {
+            $('.contacts ul li').find('.con-txt').removeClass('active');
+        }
+    });
+
+    //My menu init with burger
+    $('#my-menu').html($('.menu-main').html());
+    $("#my-menu").mmenu({
+        "extensions": [
+            "effect-menu-slide"
+        ],
+        "offCanvas": {
+            "position": "bottom"
+        },
+        "navbar": {
+            "title": ""
+        },
+        "navbars": [
+            {
+                "position": "bottom",
+                "content": [
+                    "<a class='fa fa-vk' href='https://vk.com/public98263653'></a>",
+                    "<a class='fa fa-envelope-o' href='mailto:stupnikovaelena@bk.ru'></a>",
+                    "<a class='fa  fa-phone' href='tel:89028034530'></a>",
+                ]
+            }
+        ]
+    });
+    var api = $("#my-menu").data( "mmenu" );
+    //   Hook into methods
+    api.bind( "open:finish", function() {
+        $("#menu-btn").addClass('is-active');
+    });
+    api.bind( "close:finish", function( $panel ) {
+        $("#menu-btn").removeClass('is-active');
+    });
+
 });

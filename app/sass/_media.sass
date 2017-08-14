@@ -4,52 +4,124 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
-
-
+	.map
+		padding: 0px
+	header
+	.contacts
+		text-align: right
+		ul
+			li
+				position: relative
+				a
+					position: relative
+		.con-txt
+			//display: none
+			position: absolute
+			display: inline-block
+			left: 0px
+			white-space: nowrap
+			transform: translateX(-50%)
+			background: #ffffff
+			border: solid 1px $accent2
+			padding: 10px
+			z-index: 1
+			border-radius: 5px
+			box-shadow: 5px 8px 26px -9px rgba(0,0,0,0.75)
+			display: none
+			animation: fadeEffect 1s
+			&.active
+				display: block
+			&:after
+				content: ''
+				width: 0
+				height: 0
+				border-top: 17px solid transparent
+				border-bottom: 17px solid transparent
+				border-left: 10px solid $accent2
+				position: absolute
+				top: -22px
+				right: 50%
+				transform: translateX(-50%)
+				-webkit-transform: rotate(270deg)
+				-ms-transform: rotate(270deg)
+				transform: rotate(270deg)
+			&.mail
+				left: -3px
+				top: 10px
+			&.phone
+				left: 0px
+				top: 10px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
-
-
+	.container
+		width: 100%
+	footer
+		padding-bottom: 15px
+		p
+			text-align: center
+		.img-responsive
+			margin: auto
+		.cr
+			margin-top: 20px
+			margin-bottom: 40px
+			.cr-txt
+				padding: 0 15px
+				padding-top: 15px
+				border-top: solid 1px #000000
+		.logo-cont
+			border-top: solid 1px #000000
+			padding-top: 15px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
-
+	header
+		.header-lvl1
+			padding: 0
+			.logo-cont
+				.logo-discr
+					margin-top: 25px
+					width: 215px
+					white-space: nowrap
+			.container
+				padding-left: 0%
+			.contacts
+				margin-top: 31px
+	.blog-page
+		.news-list
+			.pub-date
+				margin-top: 15px
+			.h2
+				line-height: 24px
+			.view-counts
+				text-align: left
+			.read-more
+				margin: 0px
+			.theme-txt .h3
+				word-break: break-all
+		.pag-cont .pagination
+			display: block
+			position: relative
+			.next
+				position: absolute
+				right: 0px
+			li:not(.prev):not(.next)
+				display: none
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
-
-
+	header
+		.logo-cont
+			.img-cont
+				display: none
+		.logo-discr
+			white-space: normal!important
+			width: 200px!important
+			padding-left: 35px
+			margin-top: 10px!important
+	.mm-menu.mm-offcanvas.mm-bottom, .mm-menu.mm-offcanvas.mm-top
+		height: calc(100% - 97px)
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
 
 
-/*==========  Mobile First  ==========*/
-
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px)
-	/**/
-
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px)
-	/**/
-
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px)
-	/**/
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
-
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
-	/**/
 
