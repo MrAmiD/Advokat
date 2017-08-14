@@ -916,12 +916,15 @@ footer
 .content
 	border-bottom: solid 1px #aeaeae
 	padding-bottom: 50px
+	b
+		font-weight: 900
 	h1, .h1
 		font-family: $default-font, sans-serif
-		font-size: 64px
+		font-size: 34px
 		color: $black
 		margin: 0px
 		margin-bottom: 30px
+		font-weight: 900
 	h2, .h2
 		font-family: $default-font, sans-serif
 		color: $black
@@ -992,9 +995,9 @@ footer
 	ul
 		list-style: katakana
 		padding-left: 20px
-		margin-top: 30px
+		margin-top: 20px
 		li
-			list-style: circle
+			list-style: none
 			ul
 				margin-top: 0px
 				padding-left: 30px
@@ -1077,5 +1080,35 @@ footer
 			color: $accentdark
 			border-color: $accent
 			text-decoration: none
+
+.bread-cont
+	background: $accentdark
+	padding: 0px
+	margin-bottom: 40px
+.breadcrumb
+	padding: 0
+	margin-bottom: 20px
+	list-style: none
+	background-color: transparent
+	-webkit-border-radius: 4px
+	border-radius: 4px
+	margin: 14px 0px
+	padding-left: 40px
+	.active
+		color: #ffffff !important
+	li
+		display: inline-block
+		font-size: 13px
+		color: #ffffff
+		a
+			color: #ffffff
+			font-size: 14px
+			font-weight: 700
+		a:hover
+			text-decoration: underline
+	&>li+li:before
+		content: "/\00a0"
+		padding: 0 5px
+		color: #ccc
 
 @import "media" // Всегда в конце
