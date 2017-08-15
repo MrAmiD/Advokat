@@ -1,3 +1,117 @@
+function CheckValid(selector, length, type){
+    //sekector - селекор проверяемого инпата
+    //length - длина, которую должен иметь инпат для валидности
+    //type - тип инпата, text or email
+    var OkMsgId, ErrMsgId;
+    if ($(selector).parent().parent().attr('id') == 'consult'){
+        OkMsgId = '#OkMsgCon';
+        ErrMsgId = '#ErrMsgCon';
+    }
+    else{
+        OkMsgId = '#ok-sale-msg2';
+        ErrMsgId = '#err-sale-msg2';
+    }
+
+
+    var cssValuesOk = {
+        "border-color":"green",
+        "box-shadow":"0 1px 0 0 green"
+    }
+    var cssValuesErr = {
+        "border-color":"red",
+        "box-shadow":"0 1px 0 0 red"
+    }
+    if(type == 'text'){
+        if($(selector).val().length == length) {
+            $(selector).css(cssValuesOk);
+            $(OkMsgId).fadeIn();
+            $(ErrMsgId).hide();
+            return true;
+        }
+        else{
+            $(selector).css(cssValuesErr);
+            $(ErrMsgId).fadeIn();
+            $(OkMsgId).hide();
+            return false;
+        }
+    }
+    else if(type == 'other'){
+        if($(selector).val().length >= length) {
+            $(selector).css(cssValuesOk);
+            $(OkMsgId).fadeIn();
+            $(ErrMsgId).hide();
+            return true;
+        }
+        else{
+            $(selector).css(cssValuesErr);
+            $($(selector).parent().parent().attr('id') + ' .ErrMsgCon').fadeIn();
+            $(OkMsgId).hide();
+            return false;
+        }
+    }
+    else{
+        var re = /\S+@\S+\.\S+/;
+        if(re.test($(selector).val()) == true){
+            $(selector).css(cssValuesOk);
+            $(OkMsgId).fadeIn();
+            $(ErrMsgId).hide();
+            return true
+        }
+        else{
+            $(selector).css(cssValuesErr);
+            $(ErrMsgId).fadeIn();
+            $(OkMsgId).hide();
+            return false;
+        }
+    }
+}
+
+function SaleFormValid(){
+    var data = {'action':'Sale','name':$('input[name="client-name"]').val(), 'email':$('input[name="client-email"]').val(), 'phoneCon':$('input[name="client-sale-phone"]').val()};
+    var SendData = false;
+    var validPhone = CheckValid('input[name="client-sale-phone"]', 17, 'text');
+    var validEmail = CheckValid('input[name="client-email"]', 1, 'email');
+    var validName = CheckValid('input[name="client-name"]', 2, 'other');
+    var validMsg = CheckValid('textarea[name="client-msg"]', 2, 'other');
+
+    if(validPhone && validEmail && validName && validMsg && $('#send-self-mail').is(':checked')){
+        SendData = true;
+        $('#err-sale-msg').hide();
+        $('#err-order-msg').hide();
+        $('#ok-sale-msg').fadeIn();
+    }
+    else{
+        $('#err-sale-msg').fadeIn();
+        $('#ok-sale-msg').hide();
+
+        if(validPhone && validEmail && validName && validMsg){
+            $('#err-sale-msg').hide();
+        }
+
+        if(!$('#send-self-mail').is(':checked'))
+            $('#err-order-msg').fadeIn();
+        else{
+            if(validPhone && validEmail && validName && validMsg) {
+                $('#err-sale-msg').hide();
+            }
+        }
+
+    }
+
+
+
+    if(SendData == true){
+        $.ajax({
+            type: "GET",
+            url: "ajax.html",
+            data: data
+        }).done(function() {
+            $("#popup").trigger('click');
+        });
+    }
+    return false;
+};
+
 $(function() {
 
     $('#main-slider').owlCarousel({
@@ -123,4 +237,5 @@ $(function() {
         $("#menu-btn").removeClass('is-active');
     });
 
+    $('input[name="client-sale-phone"]').mask("+7 (999) 999-9999");
 });

@@ -4,6 +4,12 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+	.contact-page .sale-form-cont .user-check-txt
+		max-width: 422px
+		display: inline-block
+	.user-check
+		position: relative
+		top: -10px
 	.map
 		padding: 0px
 	header
@@ -53,8 +59,17 @@
 				top: 10px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+	.contact-page
+		.sale-form-cont
+			margin-top: 30px
+			margin-bottom: 40px
+			.user-check-txt
+				max-width: 422px
+				display: inline-block
+
 	.container
 		width: 100%
+
 	footer
 		padding-bottom: 15px
 		p
@@ -137,6 +152,10 @@
 				svg
 					path
 						fill: $black
+	.contact-page
+		.sale-form-cont
+			.user-check-txt
+				width: calc(100% - 40px)
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
