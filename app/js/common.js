@@ -111,6 +111,51 @@ function SaleFormValid(){
     }
     return false;
 };
+function FeedBackFormValid(){
+    var data = {'action':'Sale','name':$('input[name="client-name"]').val(), 'email':$('input[name="client-email"]').val(), 'phoneCon':$('input[name="client-sale-phone"]').val()};
+    var SendData = false;
+    var validPhone = CheckValid('input[name="client-sale-phone"]', 17, 'text');
+    var validEmail = CheckValid('input[name="client-email"]', 1, 'email');
+    var validName = CheckValid('input[name="client-name"]', 2, 'other');
+    var validMsg = CheckValid('textarea[name="client-msg"]', 2, 'other');
+
+    if(validPhone && validEmail && validName && validMsg && $('#send-self-mail2').is(':checked')){
+        SendData = true;
+        $('#err-sale-msg2').hide();
+        $('#err-order-msg2').hide();
+        $('#ok-sale-msg2').fadeIn();
+    }
+    else{
+        $('#err-sale-msg2').fadeIn();
+        $('#ok-sale-msg2').hide();
+
+        if(validPhone && validEmail && validName && validMsg){
+            $('#err-sale-msg2').hide();
+        }
+
+        if(!$('#send-self-mail2').is(':checked'))
+            $('#err-order-msg2').fadeIn();
+        else{
+            if(validPhone && validEmail && validName && validMsg) {
+                $('#err-sale-msg2').hide();
+            }
+        }
+
+    }
+
+
+
+    if(SendData == true){
+        $.ajax({
+            type: "GET",
+            url: "ajax.html",
+            data: data
+        }).done(function() {
+            $("#popup").trigger('click');
+        });
+    }
+    return false;
+};
 
 $(function() {
 
@@ -132,14 +177,18 @@ $(function() {
         margin:15,
         responsive:{
             0:{
-                items:2,
-                nav:true,
-                margin:0
+                items:1,
+                nav:true
             },
-            600:{
-                items:3,
+            768:{
+                items:2,
                 nav:false,
-                margin:15
+                margin:30
+            },
+            992:{
+                items:2,
+                nav:false,
+                margin:30
             },
             1000:{
                 items:3,
@@ -186,6 +235,25 @@ $(function() {
             $(this).html('Ещё ↓');
         }
     });
+
+
+    $(document).on( "click", ".menu-service li", function() {
+        var sum_h = 0;
+        var sum_5 = 0;
+        if(!$(this).hasClass('active')){
+            $(this).find('p').each(function () {
+                sum_h = sum_h + $(this).height() + 20;//высота одного пункта(параграфа)
+                console.log('sum_h = ', sum_h);
+            });
+            $($(this)).height(sum_h + 120);
+            $(this).addClass('active');
+        }
+        else{
+            $(this).removeClass('active');
+            $($(this)).height(58);
+        }
+    });
+
 
     $(document).on( "click", ".contacts ul li", function() {
         console.log('.con-txt',$(this).find('.con-txt'));

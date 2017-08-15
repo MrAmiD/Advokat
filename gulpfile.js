@@ -32,6 +32,7 @@ gulp.task('js', ['common-js'], function() {
         'app/libs/OwlCarousel2-2.2.1/dist/owl.carousel.min.js',
         'app/libs/mmenu/jquery.mmenu.all.js',
         'app/libs/fotorama-4.6.4/fotorama.js',
+        'app/libs/coin-slider/coin-slider.js',
         'app/js/jquery.maskedinput.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])

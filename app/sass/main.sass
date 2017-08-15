@@ -142,7 +142,7 @@ p
 .hamburger-inner:before
 	top: -12px
 #my-menu
-	background: rgba(#ffffff, .68)
+	background: rgba(#ffffff, 1)
 	border-top: solid 1px #000000
 	.mm-title
 		color: #000
@@ -278,6 +278,8 @@ header
 		transform: translateY(-50%)
 		width: 100%
 		opacity: 1
+		height: 65px
+		overflow: hidden
 	.control-btn
 		background: rgba($accent, 0.7)
 		width: 65px
@@ -288,6 +290,7 @@ header
 		cursor: pointer
 		z-index: 2
 		display: inline-block
+		top: 32px
 		svg
 			line-height: 65px
 	.owl-prev
@@ -474,6 +477,11 @@ header
 
 .blog
 	margin-top: $section-margin
+	.btn-pink-h
+		margin-top: 13px
+		display: inline-block
+	.btn-pink-h-cont
+		text-align: right
 	.h3
 		text-align: center
 		font-weight: 900
@@ -1143,7 +1151,7 @@ footer
 			padding: 20px 15px
 			border-radius: 5px
 			margin-top: 20px
-	.sale-form-cont
+.sale-form-cont
 		border-radius: 5px
 		position: relative
 		z-index: 1
@@ -1214,6 +1222,49 @@ footer
 				z-index: -1
 				line-height: 1
 
+#consult
+	max-width: 500px
+	.h4
+		margin-top: 10px
+		margin-bottom: 10px
+	.client-msg
+		display: none
+.menu-service
+	padding: 0
+	margin: 0px
+	li
+		text-align: center
+		background: $accentdark
+		color: #ffffff
+		font-weight: 500
+		font-size: 24px
+		line-height: 58px
+		//height: 58px
+		overflow: hidden
+		transition: height .3s ease
+		border-top: solid 1px #ffffff
+		text-align: center
+		transition: .3s ease
+		.serv-txt-h
+			border-bottom: solid 1px
+			display: inline-block
+			width: 100%
+			height: 58px
+		&.active
+			background: $accent
+			.serv-txt-h
+				border-color: #f76e75
+		.cont-swerv
+			max-width: 480px
+			margin: auto
+			padding: 30px 0px
+		p
+			color: #ffffff
+			margin: 0px
+			line-height: 1.2
+			font-size: 18px
+			margin-bottom: 20px
+			text-align: left
 *::-webkit-input-placeholder
 	color: $black
 	opacity: 1

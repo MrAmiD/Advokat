@@ -57,6 +57,16 @@
 			&.phone
 				left: 0px
 				top: 10px
+	.blog
+		.news-feed, .single-news
+			.h4
+				font-size: 12px
+				line-height: 28px
+				margin-bottom: 0px
+			.pub-date
+				font-size: 12px
+			.news-link, p
+				font-size: 11px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	.contact-page
@@ -66,10 +76,14 @@
 			.user-check-txt
 				max-width: 422px
 				display: inline-block
-
 	.container
 		width: 100%
-
+	.blog
+		margin-top: 30px
+		.h2
+			font-size: 28px
+			text-align: left
+			white-space: nowrap
 	footer
 		padding-bottom: 15px
 		p
@@ -99,6 +113,11 @@
 		a
 			font-size: 12px
 			padding: 5px 35px
+	.services
+		margin-top: 38px
+	.gallery
+		margin-top: 20px
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	header
@@ -156,7 +175,52 @@
 		.sale-form-cont
 			.user-check-txt
 				width: calc(100% - 40px)
+	.blog
+		.news-feed
+			.pub-date
+				font-size: 12px
+	.gallery
+		#customNavLicense
+			height: 63px
+			overflow: hidden
+			.owl-next
+				right: -17px
+				svg
+					right: 13px
+			.owl-prev
+				left: -17px
+				svg
+					left: 13px
+			.control-btn
+				top: 15px
+				background: $accent
+				position: absolute
+				height: 63px
+				width: 63px
+				svg
+					position: relative
+					top: 50%
+					transform: translateY(-50%)
 
+		#license-gallery
+			padding: 0px
+			.item
+				height: 300px
+				border: none
+				border-top: solid 10px $accent
+				border-bottom: solid 10px $accent
+				&:hover:after
+					display: none
+		.h2
+			text-align: left
+			color: #000
+			margin-top: 20px
+		.container-fluid
+			border-top: solid 1px #e8e8e8
+			padding: 0px
+			background: #ffffff !important
+			&:after
+				display: none
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	header
@@ -179,6 +243,22 @@
 			width: 123px
 			top: 72px
 			left: -18px
+	.blog
+		.news-feed
+			.prev-cont
+				width: 0%
+				display: none
+			.h4
+				line-height: 20px
+				margin-bottom: 10px
+	.col-xss-12
+		width: 100%
+	.blog
+		.btn-pink-h-cont
+			text-align: left
+			margin-bottom: 10px
+		.h2
+			margin-bottom: 0px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
