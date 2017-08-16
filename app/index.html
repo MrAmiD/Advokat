@@ -30,6 +30,7 @@
 
 <body>
 
+
 <header>
     <div class="container-fluid header-lvl1">
         <div class="container">
@@ -45,15 +46,19 @@
                     </nav>
                 </div>
                 <div class="col-xs-8 col-sm-8 col-md-6">
+
                     <div class="logo-cont">
+                        <a href="/">
                         <div class="img-cont">
                             <img src="img/Logo.png" alt="Адвокат Ступникова Е.А.">
                         </div>
+                        </a>
                         <div class="logo-discr">
                             <span class="h4">Адвокат</span> <br>
                             <p>Ступникова Елена Анатольевна</p>
                         </div>
                     </div>
+
                 </div>
                 <div class="col-xs-12 col-xs-2 col-sm-2 col-md-6 contacts">
                     <ul class="">
@@ -94,7 +99,7 @@
                             <a class="tr-btn" onclick="$('#consult').click();" href="javascript:void(0)">Обратная связь</a>
                         </li>
                         <li class="hidden-md hidden-lg">
-                            <a href="javascript:void(0)">
+                            <a href="javascript:void(0)" onclick="$('#consult').click();">
                                 <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -164,44 +169,80 @@
 
 <section class="main-slider-sec hidden-sm hidden-xs">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 owl-carousel main-slider" id="main-slider">
-                <div class="item" style="background: url('img/slider1.png'); background-size: cover; background-position: center">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 col-md-6 content-slider">
-                                <h2 class="h2">Адвокат</h2>
-                                <h3 class="h3">Ступникова Елена Анатольевна</h3>
-                                <p>
-                                    Гражданские и уголовные дела любой сложности.
-                                    Гражданские и уголовные дела любой сложности.
-                                </p>
+        <div class="row main-coin-cont">
+            <div id='coin-slider' class="main-coin">
+                <a href="javascript:void(0)" target="_blank">
+                    <img class="img-responsive" src='img/slider1.png' >
+                    <span class="col-xs-12 col-md-6 content-slider">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 content-slider">
+                                    <h2 class="h2">Адвокат</h2>
+                                    <h3 class="h3">Ступникова Елена Анатольевна</h3>
+                                    <p>
+                                        Гражданские и уголовные дела любой сложности.
+                                        Гражданские и уголовные дела любой сложности.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="item" style="background: url('img/slider1.png'); background-size: cover; background-position: center;">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 col-md-6 content-slider">
-                                <h2 class="h2">Адвокат</h2>
-                                <h3 class="h3">Ступникова Елена Анатольевна</h3>
-                                <p>
-                                    Гражданские и уголовные дела любой сложности.
-                                    Гражданские и уголовные дела любой сложности.
-                                </p>
+                    </span>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src='img/GalleryBG.png' >
+                    <span class="col-xs-12 col-md-6 content-slider">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 content-slider">
+                                    <h2 class="h2">Адвокат</h2>
+                                    <h3 class="h3">Ступникова Елена Анатольевна</h3>
+                                    <p>
+                                        Гражданские и уголовные дела любой сложности.
+                                        Гражданские и уголовные дела любой сложности.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
+                    </span>
+                </a>
             </div>
-            <div class="slider-controls owl-nav col-lg-8 hidden-xs-down" id="customNavMain-slider">
-
+            <div id='coin-slider-copy' style="display: none">
+                <a href="javascript:void(0)" target="_blank">
+                    <img class="img-responsive" src='img/slider1.png' >
+                    <span class="col-xs-12 col-md-6 content-slider">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 content-slider">
+                                    <h2 class="h2">Адвокат</h2>
+                                    <h3 class="h3">Ступникова Елена Анатольевна</h3>
+                                    <p>
+                                        Гражданские и уголовные дела любой сложности.
+                                        Гражданские и уголовные дела любой сложности.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                </a>
+                <a href="javascript:void(0)">
+                    <img src='img/GalleryBG.png' >
+                    <span class="col-xs-12 col-md-6 content-slider">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 content-slider">
+                                    <h2 class="h2">Адвокат</h2>
+                                    <h3 class="h3">Ступникова Елена Анатольевна</h3>
+                                    <p>
+                                        Гражданские и уголовные дела любой сложности.
+                                        Гражданские и уголовные дела любой сложности.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                </a>
             </div>
         </div>
-
-
     </div>
 </section>
 
@@ -221,9 +262,10 @@
         </div>
         <div class="row hidden-xs hidden-sm">
             <div class="col-xs-12 col-md-4">
-                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                        <div class="front" style="background: url('img/service1.png') no-repeat">
+                <a href="">
+                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front" style="background: url('img/service1.png') no-repeat">
 								<span class="h3">
 									<div class="svg-cont">
 										<svg
@@ -236,8 +278,8 @@
 										Уголовные дела
 									</span>
 								</span>
-                        </div>
-                        <div class="back">
+                            </div>
+                            <div class="back">
 								<span class="h3">
 									<div class="svg-cont">
 										<svg
@@ -250,29 +292,31 @@
 										Уголовные дела
 									</span>
 								</span>
-                            <p>
-                                -консультации
-                            </p>
-                            <p>
-                                -защита на предварительном следствии
-                            </p>
-                            <p>
-                                -защита в судебных инстанциях
-                            </p>
-                            <p>
-                                -представление интересов потерпевшего
-                            </p>
-                            <p>
-                                -представление интересов свидетеля
-                            </p>
+                                <p>
+                                    -консультации
+                                </p>
+                                <p>
+                                    -защита на предварительном следствии
+                                </p>
+                                <p>
+                                    -защита в судебных инстанциях
+                                </p>
+                                <p>
+                                    -представление интересов потерпевшего
+                                </p>
+                                <p>
+                                    -представление интересов свидетеля
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-xs-12 col-md-4">
-                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                        <div class="front" style="background: url('img/service1.png') no-repeat">
+                <a href="">
+                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front" style="background: url('img/service1.png') no-repeat">
 
 								<span class="h3">
 									<div class="svg-cont">
@@ -286,8 +330,8 @@
 										Иные виды юридической помощи
 									</span>
 								</span>
-                        </div>
-                        <div class="back">
+                            </div>
+                            <div class="back">
 								<span class="h3">
 									<div class="svg-cont">
 										<svg
@@ -300,20 +344,24 @@
 										Иные виды юридической помощи
 									</span>
 								</span>
-                            <p>-письменные консультации</p>
-                            <p>-сбор адвокатом доказательств</p>
-                            <p>-составление ходатайств, запросов, заявлений</p>
-                            <p>-личный адвокат</p>
-                            <p>-посещение лица, находящегося под стражей (ИВС, СИЗО, ИК)</p>
+                                <p>-письменные консультации</p>
+                                <p>-сбор адвокатом доказательств</p>
+                                <p>-составление ходатайств, запросов, заявлений</p>
+                                <p>-личный адвокат</p>
+                                <p>-посещение лица, находящегося под стражей (ИВС, СИЗО, ИК)</p>
 
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
+
+
             </div>
             <div class="col-xs-12 col-md-4">
-                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                        <div class="front" style="background: url('img/service3.png') no-repeat">
+                <a href="">
+                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front" style="background: url('img/service3.png') no-repeat">
 								<span class="h3">
 									<div class="svg-cont">
 										<svg
@@ -326,8 +374,8 @@
 										Гражданские дела
 									</span>
 								</span>
-                        </div>
-                        <div class="back">
+                            </div>
+                            <div class="back">
 								<span class="h3">
 									<div class="svg-cont">
 										<svg
@@ -340,23 +388,25 @@
 										Гражданские дела
 									</span>
 								</span>
-                            <p>-консультации</p>
-                            <p>-подготовка правовых документов</p>
-                            <p>-досудебное урегулирование споров</p>
-                            <p>-представление интересов в судебных инстанциях</p>
-                            <p>-жилищные споры</p>
-                            <p>-наследственные споры</p>
-                            <p>-семейные споры</p>
-                            <p>-взыскание ущерба</p>
-                            <p>-установление юридического факта</p>
+                                <p>-консультации</p>
+                                <p>-подготовка правовых документов</p>
+                                <p>-досудебное урегулирование споров</p>
+                                <p>-представление интересов в судебных инстанциях</p>
+                                <p>-жилищные споры</p>
+                                <p>-наследственные споры</p>
+                                <p>-семейные споры</p>
+                                <p>-взыскание ущерба</p>
+                                <p>-установление юридического факта</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-xs-12 col-md-4">
-                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                        <div class="front" style="background: url('img/service4.png') no-repeat">
+                <a href="">
+                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front" style="background: url('img/service4.png') no-repeat">
 								<span class="h3">
 									<div class="svg-cont">
 										<svg
@@ -369,8 +419,8 @@
 										Арбитражные дела
 									</span>
 								</span>
-                        </div>
-                        <div class="back">
+                            </div>
+                            <div class="back">
 								<span class="h3">
 									<div class="svg-cont">
 										<svg
@@ -383,21 +433,23 @@
 										Арбитражные дела
 									</span>
 								</span>
-                            <p>-консультации</p>
-                            <p>-юридическая экспертиза документов</p>
-                            <p>-подготовка правовых документов</p>
-                            <p>-представительство в судебных инстанциях</p>
-                            <p>-корпоративные споры</p>
-                            <p>-имущественные споры</p>
-                            <p>-административные споры</p>
+                                <p>-консультации</p>
+                                <p>-юридическая экспертиза документов</p>
+                                <p>-подготовка правовых документов</p>
+                                <p>-представительство в судебных инстанциях</p>
+                                <p>-корпоративные споры</p>
+                                <p>-имущественные споры</p>
+                                <p>-административные споры</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-xs-12 col-md-4">
-                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                        <div class="front" style="background: url('img/service5.png') no-repeat">
+                <a href="">
+                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front" style="background: url('img/service5.png') no-repeat">
 								<span class="h3">
 									<div class="svg-cont">
 										<svg
@@ -410,8 +462,8 @@
 										Административные дела
 									</span>
 								</span>
-                        </div>
-                        <div class="back">
+                            </div>
+                            <div class="back">
 								<span class="h3">
 									<div class="svg-cont">
 										<svg
@@ -424,18 +476,21 @@
 										Административные дела
 									</span>
 								</span>
-                            <p>-консультации</p>
-                            <p>-подготовка правовых документов</p>
-                            <p>-представительство в органах государственной власти и управления</p>
-                            <p>-защита лица, организации в административном судопроизводстве</p>
+                                <p>-консультации</p>
+                                <p>-подготовка правовых документов</p>
+                                <p>-представительство в органах государственной власти и управления</p>
+                                <p>-защита лица, организации в административном судопроизводстве</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
+
             </div>
             <div class="col-xs-12 col-md-4">
-                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                        <div class="front" style="background: url('img/service6.png') no-repeat">
+                <a href="">
+                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                        <div class="flipper">
+                            <div class="front" style="background: url('img/service6.png') no-repeat">
 								<span class="h3">
 									<div class="svg-cont">
 										<svg
@@ -448,8 +503,8 @@
 										Абонентское обслуживание
 									</span>
 								</span>
-                        </div>
-                        <div class="back">
+                            </div>
+                            <div class="back">
 								<span class="h3">
 									<div class="svg-cont">
 										<svg
@@ -462,15 +517,16 @@
 										Абонентское обслуживание
 									</span>
 								</span>
-                            <p>-консультации</p>
-                            <p>-подготовка правовых документов</p>
-                            <p>-юридическая экспертиза документов</p>
-                            <p>-юридическое сопровождение бизнеса</p>
-                            <p>-представительство в арбитражном суде</p>
-                            <p>-исполнительное производство</p>
+                                <p>-консультации</p>
+                                <p>-подготовка правовых документов</p>
+                                <p>-юридическая экспертиза документов</p>
+                                <p>-юридическое сопровождение бизнеса</p>
+                                <p>-представительство в арбитражном суде</p>
+                                <p>-исполнительное производство</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         <div class="row hidden-md hidden-lg">
@@ -494,6 +550,9 @@
                         <p>
                             -представление интересов свидетеля
                         </p>
+                        <p class="btn-cont">
+                            <a href="">Подробнее</a>
+                        </p>
                     </div>
                 </li>
                 <li style="height: 58px;" class="">
@@ -504,6 +563,9 @@
                         <p>-составление ходатайств, запросов, заявлений</p>
                         <p>-личный адвокат</p>
                         <p>-посещение лица, находящегося под стражей (ИВС, СИЗО, ИК)</p>
+                        <p class="btn-cont">
+                            <a href="">Подробнее</a>
+                        </p>
                     </div>
                 </li>
                 <li style="height: 58px;" class="">
@@ -518,6 +580,9 @@
                         <p>-семейные споры</p>
                         <p>-взыскание ущерба</p>
                         <p>-установление юридического факта</p>
+                        <p class="btn-cont">
+                            <a href="">Подробнее</a>
+                        </p>
                     </div>
                 </li>
                 <li style="height: 58px;" class="">
@@ -530,6 +595,9 @@
                         <p>-корпоративные споры</p>
                         <p>-имущественные споры</p>
                         <p>-административные споры</p>
+                        <p class="btn-cont">
+                            <a href="">Подробнее</a>
+                        </p>
                     </div>
                 </li>
                 <li style="height: 58px;" class="">
@@ -539,6 +607,9 @@
                         <p>-подготовка правовых документов</p>
                         <p>-представительство в органах государственной власти и управления</p>
                         <p>-защита лица, организации в административном судопроизводстве</p>
+                        <p class="btn-cont">
+                            <a href="">Подробнее</a>
+                        </p>
                     </div>
                 </li>
                 <li style="height: 58px;" class="">
@@ -551,6 +622,9 @@
                         <p>-юридическое сопровождение бизнеса</p>
                         <p>-представительство в арбитражном суде</p>
                         <p>-исполнительное производство</p>
+                        <p class="btn-cont">
+                            <a href="">Подробнее</a>
+                        </p>
                     </div>
                 </li>
             </ul>
@@ -879,6 +953,7 @@
 <script src="js/scripts.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDftw6FMYhtiT2xlD1B6Ssbw11xJ8uqscU&callback=initMap"
         async defer></script>
+
 <script>
     var map;
     function initMap() {
@@ -921,6 +996,9 @@
         marker.setMap(map_way);
     }
 </script>
+
+
+
 
 </body>
 </html>

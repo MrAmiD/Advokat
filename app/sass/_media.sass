@@ -117,7 +117,10 @@
 		margin-top: 38px
 	.gallery
 		margin-top: 20px
-
+	.contacts
+		animation: shake 5s cubic-bezier(.36,.07,.19,.97) both infinite
+		transform: translate3d(0, 0, 0)
+		animation-delay: 5s
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	header
@@ -227,13 +230,15 @@
 		.logo-cont
 			.img-cont
 				display: none
+			p
+				line-height: 18px
 		.logo-discr
 			white-space: normal!important
 			width: 200px!important
 			padding-left: 35px
 			margin-top: 10px!important
 	.mm-menu.mm-offcanvas.mm-bottom, .mm-menu.mm-offcanvas.mm-top
-		height: calc(100% - 97px)
+		height: calc(100% - 91px)
 	.err-page
 		.four
 			font-size: 125px
@@ -259,6 +264,25 @@
 			margin-bottom: 10px
 		.h2
 			margin-bottom: 0px
+	.menu-service
+		li
+			.serv-txt-h
+				font-size: 17px
+				line-height: 58px
+			.cont-swerv
+				padding: 30px 15px
+	.sale-form-cont
+		.user-check-txt
+			position: relative
+			top: -10px
+		textarea
+			margin-bottom: 10px
+	#consult
+		max-width: 95%
+	.hamburger
+		top: 16px
+	header .header-lvl1 .contacts
+		margin-top: 17px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/

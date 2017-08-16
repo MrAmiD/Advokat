@@ -2,6 +2,9 @@
 @import "libs"
 @import "vars"
 
+*
+	outline: none!important
+
 *::-webkit-input-placeholder
 	color: #666
 	opacity: 1
@@ -85,6 +88,18 @@ p
 	to
 		opacity: 1
 
+@keyframes shake
+	2%, 18%
+		transform: translate3d(-1px, 0, 0)
+	4%, 16%
+		transform: translate3d(2px, 0, 0)
+	6%, 10%, 14%
+		transform: translate3d(-4px, 0, 0)
+	8%, 12%
+		transform: translate3d(4px, 0, 0)
+	100%
+		transform: translate3d(-1px, 0, 0)
+
 .tr-btn
 	border: solid 1px $accent
 	padding: 10px 20px
@@ -141,12 +156,27 @@ p
 	top: 12px
 .hamburger-inner:before
 	top: -12px
+
+
 #my-menu
 	background: rgba(#ffffff, 1)
 	border-top: solid 1px #000000
+	#mm-2
+		.mm-listview
+			li
+				font-size: 18px
+				&:first-child a
+					padding-top: 20px
+			&>li>a
+				padding: 0px
+				padding: 10px 0px
 	.mm-title
 		color: #000
 		border-color: #000000
+		font-size: 24px
+	.mm-next:after, .mm-prev:before
+		width: 15px
+		height: 15px
 	.mm-navbar
 		border-color: #000000
 	.fa
@@ -160,7 +190,10 @@ p
 		//position: relative
 		//top: 50%
 		//transform: translateY(-50%)
+		.mm-listview
 		li
+			&:first-child a
+				padding-top: 40px
 			text-align: center
 			font-family: $default-font
 			font-size: 24px
@@ -270,6 +303,81 @@ header
 			p
 				font-size: 16px
 				font-weight: 500
+	#coin-slider
+		height: 617px
+#coin-slider
+	overflow: hidden
+	position: relative
+.cs-next
+	background: rgba($accent, 0.7)
+	width: 65px
+	height: 65px
+	text-align: center
+	transform: translateY(-50%)
+	border-radius: 50%
+	cursor: pointer
+	z-index: 2
+	display: inline-block
+	top: 32px
+	position: relative
+	right: -32px!important
+	svg
+		line-height: 65px
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: 12px
+.cs-prev
+	background: rgba($accent, 0.7)
+	width: 65px
+	height: 65px
+	text-align: center
+	transform: translateY(-50%)
+	border-radius: 50%
+	cursor: pointer
+	z-index: 2
+	display: inline-block
+	top: 32px
+	position: relative
+	left: -32px!important
+	svg
+		line-height: 65px
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 12px
+.cs-title
+	width: 100%
+	background-color: transparent
+	.content-slider
+		position: relative
+		border-left: 10px solid $accent
+		background-color: rgba(255, 255, 255, 0.878)
+		box-shadow: -28.982px -1.012px 42px 18px rgba(0, 0, 1, 0.21)
+		padding: 20px 50px
+		top: 50%
+		transform: translateY(-88%)
+		.h2
+			font-size: 34px
+			font-weight: 900
+		.h3
+			font-size: 23px
+			font-weight: 700
+		p
+			font-size: 16px
+			font-weight: 500
+.cs-buttons
+	top: -46px
+	background-color: rgba(#ffffff, .8)
+	border-radius: 50px
+	z-index: 1001
+	a
+		border-radius: 50%
+		background: #ffffff
+		border-color: #ffffff
+	.cs-active
+		background: $accent
+		border-color: $accent
 #customNavMain-slider
 	&.slider-controls
 		position: absolute
@@ -316,7 +424,7 @@ header
 		color: #ffffff
 		
 .services
-	margin-top: $section-margin
+	margin-top: 60px
 	.h3
 		text-align: center
 		font-weight: 900
@@ -702,6 +810,7 @@ footer
 		line-height: 37px
 	.logo-cont
 		margin-top: 0px
+
 
 .blog-page
 	margin-top: 15px
@@ -1258,6 +1367,13 @@ footer
 			max-width: 480px
 			margin: auto
 			padding: 30px 0px
+			a
+				color: #ffffff
+				text-decoration: none
+				border: solid 1px #ffffff
+				border-radius: 5px
+				padding: 6px 25px
+				font-size: 15px
 		p
 			color: #ffffff
 			margin: 0px
@@ -1265,6 +1381,10 @@ footer
 			font-size: 18px
 			margin-bottom: 20px
 			text-align: left
+		.btn-cont
+			text-align: center
+			margin-top: 35px
+			display: block
 *::-webkit-input-placeholder
 	color: $black
 	opacity: 1
